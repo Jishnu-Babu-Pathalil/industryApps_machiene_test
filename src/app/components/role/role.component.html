@@ -1,0 +1,11 @@
+<div *ngIf="selectedCategory">
+    <input type="text" [(ngModel)]="newRole" placeholder="Enter Role">
+    <i class="fa" (click)="addRole()">&#xf067;</i>
+</div>
+
+<div *ngIf="selectedCategory">
+    <div *ngFor="let role of roleList; let i = index" style="margin-top: 10px;">
+        <input type="text" [(ngModel)]="roleList[i]" readonly>
+        <i class="fa" (click)="removeRole(i)">&#xf00d;</i>
+    </div>
+</div>

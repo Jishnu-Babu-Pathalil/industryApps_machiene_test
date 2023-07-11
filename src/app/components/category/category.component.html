@@ -1,0 +1,6 @@
+<div class="card-container">
+    <a class="card" *ngFor="let category of categories" (click)="selectCategory(category)"
+        [ngStyle]="{ 'color': category === selectedCategory ? 'green' : '' }">
+        <span> {{ category.category }}</span>
+    </a>
+</div>
